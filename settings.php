@@ -62,16 +62,16 @@ if ($hassiteconfig) {
 
         $setting = new admin_setting_configtextarea('local_imprint/css', get_string('css', 'local_imprint'),
                                                     get_string('css_descr', 'local_imprint'),
-                                                    "position: relative;\n
-                                                     bottom: 0px;\n
-                                                     left: 0px;\n
-                                                     right: 0px;\n
-                                                     background-color: #ffffff;\n
-                                                     text-align: center;\n
-                                                     padding: 10px;\n
-                                                     margin: 0px;\n
-                                                     font-size: 10px;\n
-                                                     margin-top: 50px;",
+                                                    "position: relative;\n" .
+                                                    "bottom: 0px;\n" .
+                                                    "left: 0px;\n" .
+                                                    "right: 0px;\n" .
+                                                    "background-color: #ffffff;\n" .
+                                                    "text-align: center;\n" .
+                                                    "padding: 10px;\n" .
+                                                    "margin: 0px;\n" .
+                                                    "font-size: 10px;\n" .
+                                                    "margin-top: 50px;",
                                                      PARAM_RAW);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);
