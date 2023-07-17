@@ -25,6 +25,18 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+if (!class_exists('local_imprint_admin_setting_configtext')) {
+    class local_imprint_admin_setting_configtext extends admin_setting_configtext {
+        public function validate($data) {
+            $return = parent::validate($data);
+            if ($return === true) {
+                return true;
+            }
+            return get_string('link_error', 'local_imprint');
+        }
+    }
+}
+
 if ($hassiteconfig) {
     $settings = new admin_settingpage('local_imprint_settings', new lang_string('pluginname', 'local_imprint'));
     $ADMIN->add('localplugins', $settings);
@@ -35,12 +47,12 @@ if ($hassiteconfig) {
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);
 
-        $setting = new admin_setting_configtext('local_imprint/link1', get_string('link1', 'local_imprint'),
+        $setting = new local_imprint_admin_setting_configtext('local_imprint/link1', get_string('link1', 'local_imprint'),
                     get_string('link1_descr', 'local_imprint'), '', PARAM_URL);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);
 
-        $setting = new admin_setting_configtext('local_imprint/link2', get_string('link2', 'local_imprint'),
+        $setting = new local_imprint_admin_setting_configtext('local_imprint/link2', get_string('link2', 'local_imprint'),
                     get_string('link2_descr', 'local_imprint'), '', PARAM_URL);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);
