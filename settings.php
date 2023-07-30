@@ -74,11 +74,11 @@ if ($hassiteconfig) {
 
         $setting = new admin_setting_configtextarea('local_imprint/css', get_string('css', 'local_imprint'),
                                                     get_string('css_descr', 'local_imprint'),
-                                                    "position: relative;\n" .
+                                                    "position: fixed;\n" .
                                                     "bottom: 0px;\n" .
                                                     "left: 0px;\n" .
                                                     "right: 0px;\n" .
-                                                    "background-color: #ffffff;\n" .
+                                                    "background-color: rgba(255, 255, 255, 0.5);\n" .
                                                     "text-align: center;\n" .
                                                     "padding: 10px;\n" .
                                                     "margin: 0px;\n" .
