@@ -30,7 +30,10 @@ function local_imprint_before_footer() {
 
     global $PAGE;
 
-    if ($PAGE->pagelayout != 'admin') { // Do not show on admin pages as they may use $OUTPUT.
+    $excludepages = Array('admin', 'embedded', 'frametop', 'maintenance', 'popup',
+                          'print', 'redirect', 'report');
+
+    if (!in_array($PAGE->pagelayout, $excludepages)) { // Do not show on pages that may use $OUTPUT.
 
         $settings = Array('link1', 'link2', 'publisher', 'vidsp', 'dsb');
 
