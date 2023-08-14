@@ -78,12 +78,20 @@ if ($hassiteconfig) {
                                                     "bottom: 0px;\n" .
                                                     "left: 0px;\n" .
                                                     "right: 0px;\n" .
-                                                    "background-color: rgba(255, 255, 255, 0.5);\n" .
+                                                    "background-color: rgba(255, 255, 255, 1.0);\n" .
                                                     "text-align: center;\n" .
                                                     "padding: 10px;\n" .
                                                     "margin: 0px;\n" .
                                                     "font-size: 10px;\n" .
+                                                    "z-index: 99;\n" .
                                                     "margin-top: 50px;",
+                                                     PARAM_RAW);
+        $setting->set_updatedcallback('theme_reset_all_caches');
+        $settings->add($setting);
+
+        $setting = new admin_setting_configtextarea('local_imprint/css_mobile', get_string('css_mobile', 'local_imprint'),
+                                                    get_string('css_mobile_descr', 'local_imprint'),
+                                                    "position: relative !important;\n",
                                                      PARAM_RAW);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);

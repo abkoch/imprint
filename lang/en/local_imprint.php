@@ -44,3 +44,5 @@ $string['dpo']              = 'Data privacy officer';
 $string['dpo_text']         = 'Contact to data privacy officer';
 $string['css']              = 'CSS';
 $string['css_descr']        = 'CSS rules to format the layout of the imprint';
+$string['css_mobile']       = 'Additional CSS for mobiles';
+$string['css_mobile_descr'] = 'Additional CSS rules to optimize display of the imprint on mobile devices with smaller screens';

@@ -44,3 +44,5 @@ $string['dpo']              = 'Datenschutzbeauftragte*r';
 $string['dpo_text']         = 'Kontakt zum/r behördlichen Datenschutzbeauftragte/n';
 $string['css']              = 'CSS';
 $string['css_descr']        = 'CSS-Regeln, um die Anzeige des Impressums zu formatieren';
+$string['css_mobile']       = 'Zusätzliches CSS für Mobiles';
+$string['css_mobile_descr'] = 'Zusätzliche CSS-Regeln, um die Anzeige des Impressums für mobile Endgeräte mit kleinerem Display zu optimieren';

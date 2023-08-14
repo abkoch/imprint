@@ -61,6 +61,10 @@ function local_imprint_before_footer() {
             echo '<div class="dsb">' . get_string('dpo_text', 'local_imprint');
             echo ': ' . get_config('local_imprint', 'dpo') . '</div>';
             echo '</div>';
+
+            echo '<style>@media only screen and (max-device-width: 1000px) { .local_imprint { ';
+            echo str_replace('"', '\"', get_config('local_imprint', 'css_mobile'));
+            echo '} } } </style>';
         }
 
     }
