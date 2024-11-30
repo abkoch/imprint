@@ -19,30 +19,31 @@
  *
  * @package     local_imprint
  * @category    string
- * @copyright   2023 Andreas Koch
+ * @copyright   2023-24 Andreas Koch
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['pluginname']       = 'Imprint';
+$string['css']              = 'CSS';
+$string['css_descr']        = 'CSS rules to format the layout of the imprint';
+$string['css_mobile']       = 'Additional CSS for mobiles';
+$string['css_mobile_descr'] = 'Additional CSS rules to optimize display of the imprint on mobile devices with smaller screens';
+$string['dpo']              = 'Data privacy officer';
+$string['dpo_text']         = 'Contact to data privacy officer';
 $string['enabled']          = 'Visible';
-$string['no']               = 'No';
-$string['yes']              = 'Yes';
-$string['link_error']       = 'This is not a valid URL';
 $string['link1']            = 'Privacy rules (URL)';
 $string['link1_descr']      = 'Link to privacy rules resource';
 $string['link1_text']       = 'Privacy rules';
 $string['link2']            = 'Full imprint (URL)';
 $string['link2_descr']      = 'Link to full imprint';
 $string['link2_text']       = 'Imprint';
+$string['link_error']       = 'This is not a valid URL';
+$string['no']               = 'No';
+$string['pluginname']       = 'Imprint';
 $string['publisher']        = 'Publisher';
 $string['publisher_text']   = 'Publisher';
 $string['vidsp']            = 'Responsible according to press law';
 $string['vidsp_text']       = 'Responsible according to press law';
-$string['dpo']              = 'Data privacy officer';
-$string['dpo_text']         = 'Contact to data privacy officer';
-$string['css']              = 'CSS';
-$string['css_descr']        = 'CSS rules to format the layout of the imprint';
-$string['css_mobile']       = 'Additional CSS for mobiles';
-$string['css_mobile_descr'] = 'Additional CSS rules to optimize display of the imprint on mobile devices with smaller screens';
+$string['yes']              = 'Yes';
+

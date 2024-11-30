@@ -19,23 +19,23 @@
  *
  * @package     local_imprint
  * @category    admin
- * @copyright   2023 Andreas Koch
+ * @copyright   2023-24 Andreas Koch
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 /**
  * Add imprint to footer
  */
-function local_imprint_before_footer() {
+function local_imprint_show_imprint(): void {
 
     global $PAGE;
 
-    $excludepages = Array('admin', 'embedded', 'frametop', 'maintenance', 'popup',
-                          'print', 'redirect', 'report');
+    $excludepages = ['admin', 'embedded', 'frametop', 'maintenance', 'popup',
+                          'print', 'redirect', 'report'];
 
     if (!in_array($PAGE->pagelayout, $excludepages)) { // Do not show on pages that may use $OUTPUT.
 
-        $settings = Array('link1', 'link2', 'publisher', 'vidsp', 'dsb');
+        $settings = ['link1', 'link2', 'publisher', 'vidsp', 'dsb'];
 
         $show = false;
 

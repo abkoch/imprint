@@ -18,14 +18,14 @@
  * Plugin version and other meta-data are defined here.
  *
  * @package     local_imprint
- * @copyright   2023 Andreas Koch
+ * @copyright   2023-24 Andreas Koch
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'local_imprint';
-$plugin->release = '1.0.3';
-$plugin->version = 2023071703;
-$plugin->requires = 2022112800;
+$plugin->release = '1.0.4';
+$plugin->version = 2024112900;
+$plugin->requires = 2024042200;
 $plugin->maturity = MATURITY_STABLE;
