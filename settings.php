@@ -19,14 +19,20 @@
  *
  * @package     local_imprint
  * @category    admin
- * @copyright   2023 Andreas Koch
+ * @copyright   2023-24 Andreas Koch
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 if (!class_exists('local_imprint_admin_setting_configtext')) {
+    /**
+     * Class for URL syntax check
+     */
     class local_imprint_admin_setting_configtext extends admin_setting_configtext {
+        /**
+         * Function for validation of URLs
+         */
         public function validate($data) {
             $return = parent::validate($data);
             if ($return === true) {
@@ -43,7 +49,7 @@ if ($hassiteconfig) {
 
     if ($ADMIN->fulltree) {
         $setting = new admin_setting_configselect('local_imprint/enabled', get_string('enabled', 'local_imprint'), '', 'yes',
-                    Array('yes' => get_string('yes', 'local_imprint'), 'no' => get_string('no', 'local_imprint')));
+                    ['yes' => get_string('yes', 'local_imprint'), 'no' => get_string('no', 'local_imprint')]);
         $setting->set_updatedcallback('theme_reset_all_caches');
         $settings->add($setting);
 
